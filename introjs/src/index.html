@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/css.css">
+    <link rel="stylesheet" href="/node_modules/intro.js/introjs.css">
+    <link rel="stylesheet" href="/node_modules/intro.js/introjs-rtl.css">
+</head>
+<body class="bg-default">
+    <div class="card card-body" data-step="1" data-intro="這是 card style。由NFC作者取得">
+        <div class="imgBx">
+            <img src="https://raw.githubusercontent.com/JontCont/Html-BlogUI/main/card-ui/images/1.png" alt="" class="img-item">
+        </div>
+        <div class="card-content">
+            <div class="card-content--title">
+                <h2>John Contel's<br/><span>Senior Designer</span></h2>
+                <div class="card-content--icon">
+                    <li class="li-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="li-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="li-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                    <li class="li-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card-body" data-step="2"  data-intro="這是 card style。這是我的圖像" >
+      <div class="imgBx">
+          <img src="https://avatars.githubusercontent.com/u/52921053?v=4" alt="" class="img-item">
+      </div>
+      <div class="card-content">
+          <div class="card-content--title">
+              <h2>John Contel's<br/><span>Senior Designer</span></h2>
+              <div class="card-content--icon">
+                  <li class="li-item"><a href="#" data-hint="點說明按鈕"><i class="fab fa-twitter"></i></a></li>
+                  <li class="li-item"><a href="#" data-hint="點說明按鈕"><i class="fab fa-instagram"></i></a></li>
+                  <li class="li-item"><a href="#" data-hint="點說明按鈕"><i class="far fa-envelope"></i></a></li>
+                  <li class="li-item"><a href="#" data-hint="點說明按鈕"><i class="fab fa-facebook"></i></a></li>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/intro.js/intro.js"></script>
+  <!-- <script src="/node_modules/intro.js/intro.module.js"></script> -->
+
+
+<script>
+    let jsonOption = {
+        steps: [{
+            intro: "Hello world!"
+        }, {
+            element: document.querySelector('#login'),
+            intro: "Click here to login!"
+        }]
+    };
+
+    // introJs().setOptions(jsonOption).start();
+    introJs().start();
+    introJs().addHints();
+
+</script>
+
+</body>
+</html>
